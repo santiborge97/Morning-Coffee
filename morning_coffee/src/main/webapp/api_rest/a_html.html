@@ -1,0 +1,538 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 4.1.6.2 (Linux)">
+	<META NAME="CREATED" CONTENT="20170521;150800000000000">
+	<META NAME="CHANGED" CONTENT="20170521;151000000000000">
+	<META NAME="Operator" CONTENT="Ángel Manuel Calzado Llamas">
+	<STYLE TYPE="text/css">
+	<!--
+		@page { size: 8.5in 11in; margin-left: 1.18in; margin-right: 1.18in; margin-top: 0.98in; margin-bottom: 0.98in }
+		P { margin-bottom: 0.08in }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Nuestra
+api trata de la organización de libros de una biblioteca (Library
+Application), donde el usuario puede consultar los datos de los
+libros ya sean de todos o de algunos específicos. Además podrá
+añadir y consultar sus propias listas y añadir los que considere.</SPAN></FONT></FONT></P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=4><SPAN LANG="es-ES"><U>Propiedades
+de las clases:</U></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES"><U>Book:</U></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">String
+id -&gt; Se asigna automáticamente</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">String
+title</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">String
+autor</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Integer
+añoPublicacion</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Integer
+numPaginas</SPAN></FONT></FONT></P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES"><U>ListaLibros:</U></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">String
+id</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">String
+name</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">List&lt;Book&gt;
+libros;</SPAN></FONT></FONT></P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">	</SPAN></FONT></FONT></P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-left: 0.49in; text-indent: 0.49in; margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES"><U>URls
+y verbos HTTP:</U></SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">-GET
+https://servicio-restfull.appspot.com/api/books </SPAN></FONT></FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Devuelve
+todos los libros que se encuentran almacenados.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Formato:
+JSON</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Código
+de Estado: 200-OK </SPAN></FONT></FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Ejemplo:</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_5ab357e7.png" ALIGN=BOTTOM WIDTH=312 HEIGHT=223 BORDER=0></P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">-GET
+</SPAN></FONT></FONT><FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">https://servicio-restfull.appspot.com/api/books/{bookId}</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Devuelve
+el libro con el mismo id que el indicado en la url (bookId). Es
+necesario por tanto indicar el id del libro que queremos que
+devuelva.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Formato:
+JSON</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Código
+de Estado: 200-OK ó 404-Si no existe ningún libro con ese Id.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Ejemplo:</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_a1d8659a.png" ALIGN=BOTTOM WIDTH=562 HEIGHT=145 BORDER=0></P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">-POST
+https://servicio-restfull.appspot.com/api/books</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Se
+indican los atributos de la clase libro y sus respectivos valores en
+JSON, se envían y se añaden. Todos los campos son obligatorios
+excepto el id que se añade automáticamente.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Formato:
+JSON</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Código
+de Estado: 201-Created ó 400-Solicitud Incorrecta.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Ejemplo:</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_a097a484.png" ALIGN=BOTTOM WIDTH=557 HEIGHT=303 BORDER=0></P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_6cc44eea.png" ALIGN=BOTTOM WIDTH=563 HEIGHT=286 BORDER=0></P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">-PUT
+https://servicio-restfull.appspot.com/api/books</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Edita
+el libro cuyo id es el mismo que el indicado en el JSON que se envía.
+Sólo puede editarse el título del libro, por lo que los demás
+campos deben permanecer igual.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Formato:
+JSON</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Código
+de Estado: 204-No content(Pero lo construye). </SPAN></FONT></FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Nota:
+Si se modifica cualquier otro campo que no sea el título no aparece
+código, no identifica el libro y no edita.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Ejemplo
+(Fíjese en el libro con id s7 de la anterior URL): </SPAN></FONT></FONT>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_eeb6f49e.png" ALIGN=BOTTOM WIDTH=558 HEIGHT=192 BORDER=0></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_613667cd.png" ALIGN=BOTTOM WIDTH=562 HEIGHT=252 BORDER=0></P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">-DELETE
+https://servicio-restfull.appspot.com/api/books/{bookId}</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Elimina
+el libro cuyo id es el mismo que el indicado en la url(bookId).</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Formato:
+Text</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Código
+de Estado: 204-no Content ó 404-Si el libro no existe.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Ejemplo:</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_d623641a.png" ALIGN=BOTTOM WIDTH=559 HEIGHT=26 BORDER=0></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_516a2ef0.png" ALIGN=BOTTOM WIDTH=562 HEIGHT=235 BORDER=0></P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">-GET
+https://servicio-restfull.appspot.com/api/bookList</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Devuelve
+todos los objetos de tipo lista que existen.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Formato:
+JSON</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Código
+de Estado: 200-OK</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Ejemplo:</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_680d6c82.png" ALIGN=BOTTOM WIDTH=559 HEIGHT=345 BORDER=0></P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">-GET
+https://servicio-restfull.appspot.com/api/bookList/{listId}</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Devuelve
+la lista cuyo id es el mismo que el indicado en la url.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Formato:
+JSON</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Código
+de Estado: 200-OK ó 404-Si la lista no existe.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Ejemplo:</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_f95adead.png" ALIGN=BOTTOM WIDTH=563 HEIGHT=215 BORDER=0></P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">-POST
+ https://servicio-restfull.appspot.com/api/bookList</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Añade
+un nuevo objeto lista. El campo de “libros” debe ser nulo para
+después añadirlos. El id no es obligatorio ya que se genera
+automáticamente.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Formato:
+JSON</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Codigo
+de Estado: 201-Created ó 400-Bad Request (al añadir la propiedad
+libros)</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Ejemplo:</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_67570be4.png" ALIGN=BOTTOM WIDTH=561 HEIGHT=303 BORDER=0>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">-PUT
+https://servicio-restfull.appspot.com/api/bookList</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Actualiza
+el nombre de una lista, la indicada mediante su id en el cuerpo JSON.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Formato:
+JSON</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Código
+de Estado: 204-NoContent (Construye el nuevo objeto) ó 404-La lista
+no se encuentra.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Ejemplo
+(Fíjese en el Anterior Post al crear el objeto con name=hola e
+id=l9)</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_3e1e1496.png" ALIGN=BOTTOM WIDTH=565 HEIGHT=107 BORDER=0></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_12351454.png" ALIGN=BOTTOM WIDTH=559 HEIGHT=143 BORDER=0></P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">-DELETE
+https://servicio-restfull.appspot.com/api/bookList/{listId}</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Elimina
+la lista cuyo id es el indicado en la url.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Formato:
+Text</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Código
+de Estado: 204-NoContent(Lo Borra)</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Ejemplo(Fíjese
+en la lista con id l9 del apartado anterior):</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_728b8d7d.png" ALIGN=BOTTOM WIDTH=565 HEIGHT=30 BORDER=0></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_37e2ea2e.png" ALIGN=BOTTOM WIDTH=561 HEIGHT=238 BORDER=0></P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P LANG="es-ES" ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">-POST
+https://servicio-restfull.appspot.com/api/bookList/{listaLibrosId}/{bookId}</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Añade
+un libro específico (con bookId) a una lista determinada (indicada
+con el id).</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Formato:
+Text</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Código
+de estado: 201-Created, 404-O no se encuentra el libro o no se
+encuentra la lista y 400-El libro ya está incluido en la lista.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Ejemplo:</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_ae8cc84a.png" ALIGN=BOTTOM WIDTH=456 HEIGHT=79 BORDER=0></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_7d97870d.png" ALIGN=BOTTOM WIDTH=558 HEIGHT=258 BORDER=0></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">-DELETE
+https://servicio-restfull.appspot.com/api/bookList/{listaLibrosId}/{bookId}</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Añade
+un libro específico (con bookId) a una lista determinada (indicada
+con el id).</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Formato:
+Text</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Código
+de Estado: 204-No Content(Lo elimina), 404-No se encuentra la lista o
+el libro.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Ejemplo(Eliminamos
+el libro que hemos añadido anteriormente):</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_d623641a.png" ALIGN=BOTTOM WIDTH=559 HEIGHT=26 BORDER=0></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<IMG SRC="a_html_html_ae8cc84a.png" ALIGN=BOTTOM WIDTH=456 HEIGHT=79 BORDER=0></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<FONT FACE="Times New Roman, serif"><FONT SIZE=2 STYLE="font-size: 11pt"><SPAN LANG="es-ES">Como
+al principio.</SPAN></FONT></FONT></P>
+<P ALIGN=LEFT STYLE="margin-bottom: 0.11in; line-height: 107%; widows: 2; orphans: 2">
+<BR><BR>
+</P>
+</BODY>
+</HTML>

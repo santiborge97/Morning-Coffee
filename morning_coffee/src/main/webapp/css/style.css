@@ -1,0 +1,241 @@
+body {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	margin-left: 30px;
+}
+
+button{
+	cursor:pointer;
+}
+
+.oculto{
+	display:none;
+}
+
+
+
+/* Layout */
+.container {
+	width: 500px;
+}
+
+.bottom_links {
+	text-align: right;
+	margin-top: 10px;
+}
+
+/* Headers */
+h1 {
+	color: red;
+	font-size: 2em;
+}
+
+/* Tables */
+table {
+	border-collapse: collapse;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	table-layout: fixed;
+	width: 100%;
+}
+
+td, th {
+	border: 1px solid #ddd;
+	padding: 8px;
+}
+
+td {
+	word-wrap: break-word;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+tr:hover {
+	background-color: #ddd;
+}
+
+th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: left;
+	background-color: #0099ff;
+	color: white;
+}
+
+/* Inputs */
+input[type=text] {
+	width: 50%;
+	padding: 10px 15px;
+	margin: 8px 0;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+/*Gmail*/
+#next_page_button {
+	background-color: red;
+	border: none;
+	color: white;
+	padding: 1px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 25px;
+	border-radius: 10px;
+}
+
+.confirm_button{
+
+    background-color: red;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    padding: 15px
+}
+
+#div_response_email{
+	text-align: center;
+    background-color: lightgray;
+    border-radius: 10%;
+}
+
+/* Tareas */
+#div_tareas, #div_eventos {
+	float: left;
+	display: inline;
+	width: 49%;
+}
+
+#lista_tareas{
+	list-style-type: square;
+}
+
+/* Men� nav */
+#nav_menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #f73535;
+}
+
+#nav_menu li {
+	float: left;
+}
+
+#gmail_tab a, #events_tab a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+#events_tab a:hover:not (.active ), #gmail_tab a:hover:not (.active ) {
+	background-color: red;
+}
+
+.centrar{
+	text-align: center;
+}
+
+.active {
+	background-color: #0099ff;
+}
+
+
+.otherbuttons{
+	background-color: #f44336;
+	font-size: 20px;
+	border-radius: 12px;
+	padding: 8px 15px;
+	border: 2px solid #ffffff;
+	color: #ffffff;
+	text-shadow: 1px 1px #000000;
+}
+		
+.otherbuttons:hover {
+   	background-color: white; /* Green */
+    color: red;
+    border: 2px solid red;
+}
+
+
+/* Index y Steps */
+
+#welcome{
+	text-align: center;
+	color: #0099ff;
+	text-shadow: 1px 1px #000000;
+	font-size: 400%;
+}
+		
+#subtitle{
+	text-align: center;
+	color: black;
+	font-size: 120%;
+}
+		
+#register{
+	text-align: center;
+	color: white;
+}
+
+#singin{
+	text-align: center;
+	color: #ffffff;
+}
+
+#singintext{
+	text-align: center;
+	font-size: 80%;
+	color: gray;
+}
+		
+.indexbuttons{
+	background-color: #f44336;
+	font-size: 30px;
+	border-radius: 12px;
+	padding: 10px 24px;
+	border: 2px solid #ffffff;
+	color: #ffffff;
+	text-shadow: 1px 1px #000000;
+}
+		
+.indexbuttons:hover {
+   	background-color: white; /* Green */
+    color: red;
+    border: 2px solid red;
+}
+
+.steps{
+    		text-align: center;
+			color: #0099ff;
+			text-shadow: 1px 1px #000000;
+			font-size: 240%;
+    	}
+    	
+    	.stepsbuttons{
+    		font-size: 100%;
+    		text-align: center;
+    	}
+
+#step1registrar{
+    font-size: 100%;
+   	text-align: center;
+}
+
+#step2registrar{
+    font-size: 100%;
+    text-align: center;
+}
+
+#step3registrar{
+    font-size: 100%;
+    text-align: center;
+}

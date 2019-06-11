@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- Servlets de Gmail -->
+  <servlet>
+    <servlet-name>GmailMessageListingServlet</servlet-name>
+    <servlet-class>aiss.controller.GmailMessageListController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GmailMessageListingServlet</servlet-name>
+    <url-pattern>/GmailMessageListing</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>GmailMessageResponse</servlet-name>
+    <servlet-class>aiss.controller.GmailMessageResponse</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GmailMessageResponse</servlet-name>
+    <url-pattern>/GmailMessageResponse</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>GmailAddTaskServlet</servlet-name>
+    <servlet-class>aiss.controller.GmailAddTask</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GmailAddTaskServlet</servlet-name>
+    <url-pattern>/GmailAddTask</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>GmailAddReminderServlet</servlet-name>
+    <servlet-class>aiss.controller.GmailAddReminder</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GmailAddReminderServlet</servlet-name>
+    <url-pattern>/GmailAddReminder</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- Servlets de Calendar -->
+  <servlet>
+    <servlet-name>EventsServlet</servlet-name>
+    <servlet-class>aiss.controller.EventsController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>EventsServlet</servlet-name>
+    <url-pattern>/EventsView</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CalendarEventDelete</servlet-name>
+    <servlet-class>aiss.controller.CalendarEventDelete</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CalendarEventDelete</servlet-name>
+    <url-pattern>/CalendarEventDelete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+    <servlet-name>CalendarEventInsert</servlet-name>
+    <servlet-class>aiss.controller.CalendarEventInsert</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CalendarEventInsert</servlet-name>
+    <url-pattern>/CalendarEventInsert</url-pattern>
+  </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>CalendarEventUpdate</servlet-name>
+    <servlet-class>aiss.controller.UpdateEventController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CalendarEventUpdate</servlet-name>
+    <url-pattern>/UpdateEvent</url-pattern>
+  </servlet-mapping>
+  
+
+ 
+ <!-- Servlets de Wunderlist -->
+  <servlet>
+    <servlet-name>WunderlistTasksServlet</servlet-name>
+    <servlet-class>aiss.controller.TasksListController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WunderlistTasksServlet</servlet-name>
+    <url-pattern>/TasksList</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>WunderlistNewTaskServlet</servlet-name>
+    <servlet-class>aiss.controller.NewTaskController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WunderlistNewTaskServlet</servlet-name>
+    <url-pattern>/NewTask</url-pattern>
+  </servlet-mapping>
+   <servlet>
+    <servlet-name>WunderlistDeleteTaskServlet</servlet-name>
+    <servlet-class>aiss.controller.DeleteTaskController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WunderlistDeleteTaskServlet</servlet-name>
+    <url-pattern>/DeleteTask</url-pattern>
+  </servlet-mapping>
+     <servlet>
+    <servlet-name>WunderlistUpdateTaskServlet</servlet-name>
+    <servlet-class>aiss.controller.UpdateTaskController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WunderlistUpdateTaskServlet</servlet-name>
+    <url-pattern>/UpdateTask</url-pattern>
+  </servlet-mapping>
+  <servlet>
+  
+  
+  
+  
+  
+  <!-- ############################### Servlets de OAuth ########################### -->
+  <!-- OAuth de Calendar -->
+    <description></description>
+    <display-name>GoogleCalendarAuthController</display-name>
+    <servlet-name>GoogleCalendarAuthController</servlet-name>
+    <servlet-class>aiss.controller.oauth.GenericAuthController</servlet-class>
+    <init-param>
+      <param-name>provider</param-name>
+      <param-value>GoogleCalendar</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GoogleCalendarAuthController</servlet-name>
+    <url-pattern>/AuthController/GoogleCalendar</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GoogleCalendarOAuth2Callback</display-name>
+    <servlet-name>GoogleCalendarOAuth2Callback</servlet-name>
+    <servlet-class>aiss.controller.oauth.OAuth2Callback</servlet-class>
+    <init-param>
+      <param-name>provider</param-name>
+      <param-value>GoogleCalendar</param-value>
+    </init-param>
+    <init-param>
+      <param-name>onSuccess</param-name>
+      <param-value>redirect:/GmailMessageListing</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GoogleCalendarOAuth2Callback</servlet-name>
+    <url-pattern>/oauth2callback/GoogleCalendar</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- OAuth de Gmail -->
+  <servlet>
+    <description></description>
+    <display-name>GmailAuthController</display-name>
+    <servlet-name>GmailAuthController</servlet-name>
+    <servlet-class>aiss.controller.oauth.GenericAuthController</servlet-class>
+    <init-param>
+      <param-name>provider</param-name>
+      <param-value>Gmail</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GmailAuthController</servlet-name>
+    <url-pattern>/AuthController/Gmail</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GmailOAuth2Callback</display-name>
+    <servlet-name>GmailOAuth2Callback</servlet-name>
+    <servlet-class>aiss.controller.oauth.OAuth2Callback</servlet-class>
+    <init-param>
+      <param-name>provider</param-name>
+      <param-value>Gmail</param-value>
+    </init-param>
+    <init-param>
+      <param-name>onSuccess</param-name>
+      <param-value>redirect:/step_two.jsp</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GmailOAuth2Callback</servlet-name>
+    <url-pattern>/oauth2callback/Gmail</url-pattern>
+  </servlet-mapping>
+  
+  <!-- OAuth de Wunderlist -->
+  <servlet>
+    <description></description>
+    <display-name>WunderlistAuthController</display-name>
+    <servlet-name>WunderlistAuthController</servlet-name>
+    <servlet-class>aiss.controller.oauth.WunderlistRedirectController</servlet-class>
+    <init-param>
+      <param-name>provider</param-name>
+      <param-value>Wunderlist</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WunderlistAuthController</servlet-name>
+    <url-pattern>/AuthController/Wunderlist</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>WunderlistOAuth2Callback</display-name>
+    <servlet-name>WunderlistOAuth2Callback</servlet-name>
+    <servlet-class>aiss.controller.oauth.WunderlistOAuthController</servlet-class>
+    <init-param>
+      <param-name>provider</param-name>
+      <param-value>Wunderlist</param-value>
+    </init-param>
+    <init-param>
+      <param-name>onSuccess</param-name>
+      <param-value>redirect:/step_three.jsp</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WunderlistOAuth2Callback</servlet-name>
+    <url-pattern>/Wunderlist</url-pattern>
+  </servlet-mapping>
+</web-app>

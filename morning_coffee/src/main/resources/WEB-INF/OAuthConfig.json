@@ -1,0 +1,26 @@
+{
+	"Wunderlist": {
+		"tokenUrl": "https://www.wunderlist.com/oauth/access_token",
+		"clientId": "4017379b2bb52043c811",
+		"clientSecret": "f943802799f6516084619132c993e5c4c65dd934216bd52b2766a1b34f0a",
+		"authorizationFormUrl": "https://www.wunderlist.com/oauth/authorize?state=RANDOM"
+	},
+	"Gmail": {
+		"tokenUrl": "https://accounts.google.com/o/oauth2/token",
+		"clientId": "266000279479-b8a2p2svudpj0275v23q2ia10jrl7p9q.apps.googleusercontent.com",
+		"clientSecret": "zDstXVj2bJ4B1oJ_jPqDW9_I",
+		"authorizationFormUrl": "https://accounts.google.com/o/oauth2/auth",
+		"scopes": [
+			"https://www.googleapis.com/auth/gmail.modify"
+		]
+	},
+	"GoogleCalendar": {
+		"tokenUrl": "https://www.googleapis.com/oauth2/v4/token",
+		"clientId": "266000279479-pki4k87qaojoqh883gk45m8me806ort3.apps.googleusercontent.com",
+		"clientSecret": "kGMRuXL-EDI41rDgDQ76Om7S",
+		"authorizationFormUrl": "https://accounts.google.com/o/oauth2/v2/auth",
+		"scopes": [
+			"https://www.googleapis.com/auth/calendar"
+		]
+	}
+}		
